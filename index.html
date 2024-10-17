@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catatan Hutang</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Catatan Hutang</h1>
+
+      <!-- Form untuk Menambah Hutang -->
+      <div class="form-container">
+        <h2>Tambah Hutang Baru</h2>
+        <form id="formHutang">
+          <input
+            type="text"
+            id="namaPenghutang"
+            placeholder="Nama Hutang"
+            required
+          />
+          <input
+            type="number"
+            id="jumlahHutang"
+            placeholder="Jumlah Hutang"
+            required
+          />
+          <input type="date" id="tanggalHutang" required />
+          <textarea
+            id="catatanHutang"
+            placeholder="Catatan (Opsional)"
+          ></textarea>
+
+          <!-- Dropdown untuk Kategori Hutang -->
+          <select id="kategoriHutang" required>
+            <option value="" disabled selected>Pilih Kategori Hutang</option>
+            <option value="besar">Hutang Besar</option>
+            <option value="sedang">Hutang Sedang</option>
+            <option value="kecil">Hutang Kecil</option>
+          </select>
+
+          <button type="submit">Tambah Hutang</button>
+        </form>
+      </div>
+
+      <!-- Tabel Hutang -->
+      <h2>Hutang Besar</h2>
+      <table id="tabelHutangBesar">
+        <thead>
+          <tr>
+            <th>Nama Hutang</th>
+            <th>Jumlah</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data hutang besar akan ditambahkan di sini -->
+        </tbody>
+      </table>
+
+      <h2>Hutang Sedang</h2>
+      <table id="tabelHutangSedang">
+        <thead>
+          <tr>
+            <th>Nama Hutang</th>
+            <th>Jumlah</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data hutang sedang akan ditambahkan di sini -->
+        </tbody>
+      </table>
+
+      <h2>Hutang Kecil</h2>
+      <table id="tabelHutangKecil">
+        <thead>
+          <tr>
+            <th>Nama Hutang</th>
+            <th>Jumlah</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data hutang kecil akan ditambahkan di sini -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
